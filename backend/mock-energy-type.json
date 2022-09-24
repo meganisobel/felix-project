@@ -1,0 +1,17 @@
+{
+    "energyTypes": [
+        {
+                "appliance": "microwave",
+                "average": "typical microwave (800W, category E)",
+                "energyType": "electricity",
+                "kilowattsPerHour": 0.09
+
+        },
+        {
+                "appliance": "gasStove",
+                "average": "typical microwave (800W, category E)",
+                "energyType": "gas",
+                "kilowattsPerHour": 0.9
+        }
+    ]
+}

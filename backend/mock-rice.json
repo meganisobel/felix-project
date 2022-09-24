@@ -1,0 +1,37 @@
+{
+    "recipes": [
+        {
+            "id": "1",
+            "label": "paella",
+            "ingredients": [
+                {
+                    "ingredient": "peas",
+                    "amount": "100g",
+                    "price": 1.80
+                },
+                {
+                    "ingredient": "onions",
+                    "amount": "2",
+                    "price": 0.50
+                }
+            ],
+            "nutritionalInformation": [
+                {
+                    "nutrientType": "sugars",
+                    "nutrientGramsPer100Grams": 9.1
+                },
+                {
+                    "nutrientType": "saturatedFat",
+                    "nutrientGramsPer100Grams": 1.6
+                },
+                {
+                    "nutrientType": "salt",
+                    "nutrientGramsPer100Grams": 0.7
+                }
+            ],
+            "methodOfCooking": [
+                { "cookingMode": "gasStove", "duration": 0.5 }
+            ]
+        }
+    ]
+}

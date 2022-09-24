@@ -1,0 +1,6 @@
+{
+    "energyTypes": [
+        {"type": "gas", "priceOfKilowattsPerHour": 0.15},
+        {"type": "electricity", "priceOfKilowattsPerHour": 0.52}
+    ]
+}
