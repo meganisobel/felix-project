@@ -88,7 +88,12 @@ app.get('/recipe', (req, res) => {
     let ingredient = req.query.ingredient;
     //TODO - this wouldn't be stubbed
     if (ingredient === "rice") {
-        const recipeScores = rice.recipes.map(recipe => calculateScore(recipe))
+        const recipeScores = rice.recipes.map(recipe => {
+            return {
+                score: calculateScore(recipe),
+                recipe: recipe.label
+            }
+            })
         res.json(recipeScores)
     }
   res.send(`No recipes found for ${ingredient}`);

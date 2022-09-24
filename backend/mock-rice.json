@@ -32,6 +32,39 @@
             "methodOfCooking": [
                 { "cookingMode": "gasStove", "duration": 0.5 }
             ]
+        },
+        {
+            "id": "2",
+            "label": "risotto",
+            "ingredients": [
+                {
+                    "ingredient": "chicken",
+                    "amount": "100g",
+                    "price": 3.6
+                },
+                {
+                    "ingredient": "onions",
+                    "amount": "2",
+                    "price": 0.50
+                }
+            ],
+            "nutritionalInformation": [
+                {
+                    "nutrientType": "sugars",
+                    "nutrientGramsPer100Grams": 5
+                },
+                {
+                    "nutrientType": "saturatedFat",
+                    "nutrientGramsPer100Grams": 4
+                },
+                {
+                    "nutrientType": "salt",
+                    "nutrientGramsPer100Grams": 0.5
+                }
+            ],
+            "methodOfCooking": [
+                { "cookingMode": "gasStove", "duration": 0.25 }
+            ]
         }
     ]
 }
