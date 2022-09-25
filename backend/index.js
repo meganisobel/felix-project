@@ -1,9 +1,7 @@
 const mockEnergyCost = require('./mock-energy-cost.json')
 const mockEnergyType = require('./mock-energy-type.json')
 const rice = require('./mock-rice.json')
-
 const express = require('express');
-
 const app = express();
 
 const transformEnergyToPrice = (methodOfCooking) => {
@@ -79,7 +77,7 @@ const calculateScore = (recipe) => {
 
 
 app.get('/recipe', (req, res) => {
-    let ingredient = req.query.ingredient;
+    const ingredient = req.query.ingredient;
     //TODO - this wouldn't be stubbed
     if (ingredient === "rice") {
         const recipeScores = rice.recipes.map(recipe => {
