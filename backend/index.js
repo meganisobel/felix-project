@@ -8,12 +8,8 @@ const app = express();
 
 const transformEnergyToPrice = (methodOfCooking) => {
     let totalPrice = 0
-    console.log(methodOfCooking)
-
     for (const item of methodOfCooking) {
         const { cookingMode, duration } = item
-        console.log(mockEnergyType)
-        console.log(cookingMode)
         const { energyType, kilowattsPerHour } = mockEnergyType.energyTypes.find(type => type.appliance === cookingMode)
         const { priceOfKilowattsPerHour } = mockEnergyCost.energyTypes.find(type => type.type === energyType)
         const itemEnergyCost = duration * priceOfKilowattsPerHour * kilowattsPerHour
@@ -23,13 +19,11 @@ const transformEnergyToPrice = (methodOfCooking) => {
 }
 
 const calculateIngredientsPrice = (ingredients) => {
-    const price = ingredients.reduce( (runningTotal, current) => {
+    return ingredients.reduce( (runningTotal, current) => {
         return runningTotal + current.price
         },
         0
     )
-    console.log(price)
-    return price
 }
 
 const calculateNutritionalScore = (nutritionalInformationPer100Grams) => {
@@ -69,7 +63,7 @@ const calculateNutritionalScore = (nutritionalInformationPer100Grams) => {
     return cumulativeScore
 }
 
-//lower scores are better
+
 const calculateScore = (recipe) => {
     const energyPrice = transformEnergyToPrice(recipe?.methodOfCooking)
     const ingredientsPrice = calculateIngredientsPrice(recipe?.ingredients)
